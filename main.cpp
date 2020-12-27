@@ -5,23 +5,23 @@
 int main()
 {
     std::shared_ptr<Tower> wieza = std::make_shared<Tower>();
-    Plane samolot(2, 24, wieza);
-    Plane samolot2(31, 3, wieza);
-    Plane samolot3(100, 4, wieza);
+    std::shared_ptr<Airport> lotnisko = std::make_shared<Airport>();
+    Plane samolot(200000, 8003330, wieza, lotnisko);
+    Plane samolot2(311100, 30200, wieza, lotnisko);
+    Plane samolot3(100330, 412000, wieza, lotnisko);
 
+    std::cout << Plane::getNumberOfPlanes() << std::endl;
+    std::cout << "INICJALIZACJA" << std::endl;
     wieza->printPlanes();
-    std::cout << "INICJALIZACJA\n" << std::endl;
 
-    while (!(samolot.isLanded() && samolot2.isLanded() && samolot3.isLanded()))
+    while (!(samolot.getLanded() & samolot2.getLanded() & samolot3.getLanded()))
     {
         samolot.update();
         samolot2.update();
         samolot3.update();
-
-        wieza->printPlanes();
-
-        std::cout << std::endl;
     }
+
+    lotnisko->printLandedPlanes();
 
     return 0;
 }

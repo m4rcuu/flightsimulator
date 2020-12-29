@@ -26,7 +26,6 @@ private:
 
 public:
     Plane(int _distance, int _lane, std::shared_ptr<Tower> _tower, std::shared_ptr<Airport> _airport);
-    ~Plane();
 
     void update();
     int getMovements();

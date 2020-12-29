@@ -4,24 +4,15 @@
 
 int main()
 {
-    std::shared_ptr<Tower> wieza = std::make_shared<Tower>();
-    std::shared_ptr<Airport> lotnisko = std::make_shared<Airport>();
-    Plane samolot(200000, 8003330, wieza, lotnisko);
-    Plane samolot2(311100, 30200, wieza, lotnisko);
-    Plane samolot3(100330, 412000, wieza, lotnisko);
+    int numberOfPlanes = 0;
 
-    std::cout << Plane::getNumberOfPlanes() << std::endl;
-    std::cout << "INICJALIZACJA" << std::endl;
-    wieza->printPlanes();
+    std::cout<<"How many planes to create: ";
+    std::cin>>numberOfPlanes;
+    std::cout<<std::endl;
 
-    while (!(samolot.getLanded() & samolot2.getLanded() & samolot3.getLanded()))
-    {
-        samolot.update();
-        samolot2.update();
-        samolot3.update();
-    }
-
-    lotnisko->printLandedPlanes();
+    Simulator simulator(numberOfPlanes);
+    simulator.update();
+    simulator.end();
 
     return 0;
 }

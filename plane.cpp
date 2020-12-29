@@ -16,11 +16,6 @@ Plane::Plane(int _distance, int _lane, std::shared_ptr<Tower> _tower, std::share
     this->sendPosition();
 }
 
-Plane::~Plane()
-{
-    numberOfPlanes--;
-}
-
 void Plane::move()
 {
     if (distance > lane)
@@ -84,12 +79,12 @@ int Plane::getOperations()
     return operations;
 }
 
-int Plane::getNumberOfPlanes()
-{
-    return numberOfPlanes;
-}
-
 bool Plane::getLanded()
 {
     return landed;
+}
+
+int Plane::getNumberOfPlanes()
+{
+    return numberOfPlanes;
 }

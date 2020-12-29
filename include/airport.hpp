@@ -24,4 +24,5 @@ private:
 public:
     void setLandedPlanes(int _number, int _movements, int _operations);
     void printLandedPlanes();
+    int getNumberOfLandedPlanes();
 };

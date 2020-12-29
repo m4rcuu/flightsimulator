@@ -14,3 +14,8 @@ void Airport::printLandedPlanes()
         std::cout << "it" << ++num << " n" << i.number << " m" << i.movements << " o" << i.operations << " t" << i.time << "ms" << std::endl;
     }
 }
+
+int Airport::getNumberOfLandedPlanes()
+{
+    return landedPlanes.size();
+}

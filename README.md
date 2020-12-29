@@ -10,8 +10,9 @@ it121 n74 m18232 o18232 t1874.12ms
 it122 n39 m18322 o18322 t1874.75ms
 it123 n9 m18657 o18659 t1875.95ms
 ```
--```it``` the smaller number, the earlier the plane landed,
--```n``` the smaller number, the earlier the plane was created,
--```m``` movements,
--```o``` movements + waiting when a collision has occurred,
--```t``` time from creating to landing in ms.
+How to interpret it:
+- ```it``` the smaller number, the earlier the plane landed,
+- ```n``` the smaller number, the earlier the plane was created,
+- ```m``` movements,
+- ```o``` movements + waiting when a collision has occurred,
+- ```t``` time from creating to landing in ms.
